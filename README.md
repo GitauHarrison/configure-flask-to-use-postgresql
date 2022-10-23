@@ -16,13 +16,13 @@ This project demonstrates how to use the popular postgreSQL database with Flask.
 
 ## Configure PostgreSQL Database
 
-If you are interested in learning how to use postgreSQL with Flask, you can check the project's full tutorial [here](https://github.com/GitauHarrison/notes/blob/master/databases/project_configure_postgres_in_flask.md)
+If you are interested in learning how to use postgreSQL with Flask, you can check the project's full tutorial [here](https://github.com/GitauHarrison/notes/blob/master/databases/project_configure_postgres_in_flask.md).
 
 ### Step 1: Access PostgreSQL from PSQL
 
-PSQL is a terminal front-end tool used to access the postgreSQL database. If you have reviewed the lesson [Access PostgreSQL using `psql`](https://github.com/GitauHarrison/notes/blob/master/databases/databases/access_postgresql/psql.md), this will be quite easily. If not, I recommend that you start there.
+PSQL is a terminal front-end tool used to access the postgreSQL database. If you have reviewed the lesson [Access PostgreSQL using `psql`](https://github.com/GitauHarrison/notes/blob/master/databases/databases/access_postgresql/psql.md), this will be quite easy. If you haven't, I recommend that you start there.
 
-Log into postgreSQL as the postgres user by running this command in the terminal:
+Log into postgreSQL as the `postgres` user by running this command in the terminal:
 
 ```sql
 (venv)$ sudo -u postgres psql
@@ -38,7 +38,7 @@ You can split your VS Code terminal into two so that one window runs the flask s
 
 ### Step 2: Create a New User
 
-Notice that the prompt on the terminal has changed to `postgres`. We can issue our first postgres command to create another user called `muthoni` by running:
+Notice that the prompt on the terminal has changed to `postgres=#`. We can issue our first postgres command to create another user called `muthoni` by running:
 
 ```sql
 postgres=# CREATE USER muthoni SUPERUSER;
@@ -47,7 +47,7 @@ CREATE ROLE
 
 ### Step 3: List all Users
 
-You can list all the application users by running:
+List all the available database users by running:
 
 ```sql
 postgres=# \du
@@ -120,4 +120,4 @@ postgres=# \l
 
 You can see that `muthoni` is the owner of `demo_postgres_app` database.
 
-And, that is it! Your Flask Application is now ready to use the postgreSQL database. 
+And, that is it! Your Flask application is now ready to use the postgreSQL database. 
