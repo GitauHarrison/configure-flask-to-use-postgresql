@@ -20,7 +20,7 @@ If you are interested in learning how to use postgreSQL with Flask, you can chec
 
 ### Step 1: Access PostgreSQL from PSQL
 
-PSQL is a terminal front-end tool used to access the postgreSQL database. If you have reviewed the lesson [Access PostgreSQL using `psql`](https://github.com/GitauHarrison/notes/blob/master/databases/databases/access_postgresql/psql.md), this will be quite easy. If you haven't, I recommend that you start there.
+PSQL is a terminal front-end tool used to access the postgreSQL database. If you have reviewed the lesson [Access PostgreSQL using `psql`](https://github.com/GitauHarrison/notes/blob/master/databases/access_postgresql/psql.md), this will be quite easy. If you haven't, I recommend that you start there.
 
 Log into postgreSQL as the `postgres` user by running this command in the terminal:
 
