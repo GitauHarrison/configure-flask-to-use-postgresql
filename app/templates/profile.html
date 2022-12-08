@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_context %}
 <div class="row">
     <div class="col-md-12">
         <h1>Profile</h1>
         <p>Username: {{ current_user.username }}</p>
+        <p> {{ wtf.quick_form(form) }} </p>
+        {% for post in posts %}
+            <p> {{ post }} </p>
+        {% endfor %}
     </div>  
 </div>
 {% endblock %}

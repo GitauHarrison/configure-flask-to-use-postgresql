@@ -1,16 +1,24 @@
 from app import app, db
 from flask import render_template, url_for, redirect, flash
-from app.forms import LoginForm, RegistrationForm
+from app.forms import LoginForm, RegistrationForm, PostForm
 from flask_login import login_user, logout_user, current_user, login_required
-from app.models import User
+from app.models import User, Post
 
 
-@app.route('/')
-@app.route('/profile')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
     """Profile page"""
-    return render_template('profile.html', title='Profile')
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.body.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post has been saved')
+        return redirect(url_for('profile'))
+    posts = Post.query.all()
+    return render_template('profile.html', title='Profile', form=form, posts=posts)
 
 
 @app.route('/login', methods=['GET', 'POST'])
