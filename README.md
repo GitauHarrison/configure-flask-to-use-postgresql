@@ -9,6 +9,12 @@ This project demonstrates how to use the popular postgreSQL database with Flask.
  - [Technologies Used](#technologies-used)
  - [Features](#features)
  - [Configure PostgreSQL Database](#configure-postgresql-database)
+   -  [Connect Using `psql`](#step-1-access-postgresql-from-psql)
+   - [Create New User](#step-2-create-a-new-user)
+   - [List All Users](#step-3-list-all-users)
+   - [Add User Password](#step-4-add-user-password)
+   - [Create a Database](#step-5-create-a-database)
+   - [See All Databases](#step-6-see-all-your-databases)
  - [Testing the Application Locally](#testing-the-application-locally)
 
 ## Technologies Used
