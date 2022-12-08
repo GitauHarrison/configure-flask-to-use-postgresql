@@ -4,6 +4,13 @@ This project demonstrates how to use the popular postgreSQL database with Flask.
 
 ![Demo App](app/static/css/images/postgres_demo_app.gif)
 
+### Table of Contents
+
+ - [Technologies Used](#technologies-used)
+ - [Features](#features)
+ - [Configure PostgreSQL Database](#configure-postgresql-database)
+ - [Testing the Application Locally](#testing-the-application-locally)
+
 ## Technologies Used
 
 - Flask
@@ -11,7 +18,8 @@ This project demonstrates how to use the popular postgreSQL database with Flask.
 
 ## Features
 
-- Basic User Authentication
+- [x] Basic User Authentication
+- [x] User posts
 
 
 ## Configure PostgreSQL Database
@@ -121,3 +129,45 @@ postgres=# \l
 You can see that `muthoni` is the owner of `demo_postgres_app` database.
 
 And, that is it! Your Flask application is now ready to use the postgreSQL database. 
+
+
+## Testing the Application Locally
+
+- Clone this repository:
+
+```python
+$ git clone git@github.com:GitauHarrison/configure-flask-to-use-postgresql.git
+```
+
+- Change directory to the cloned folder:
+
+```python
+$ cd configure-flask-to-use-postgresql
+```
+
+- Create and activate a virtual environment.
+
+```python
+$ python3 -m venv venv
+$ source venv/bin/activate
+```
+
+- Install project dependancies.
+
+```python
+(venv)$ pip3 install -r requirements.txt
+```
+
+- Update project configurations as seen in the `.env-template` file.
+
+```python
+(venv)$ cp .env-template .env
+```
+
+- Start the server.
+
+```python
+(venv)$ flask run
+```
+
+- Navigate to your browser and paste the link http://127.0.0.1:5000 to see the actual application.
