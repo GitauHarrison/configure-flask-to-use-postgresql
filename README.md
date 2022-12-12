@@ -191,4 +191,4 @@ To run the tests, ensure you have cloned this repo. From the top-level directory
 (venv)$ pytest --cov=test_web_app --cov-report=term-missing --cov-branch
 ```
 
-All 6 tests should pass, and the test should show 100% coverage.
+All 6 tests should pass, with 100% coverage.
