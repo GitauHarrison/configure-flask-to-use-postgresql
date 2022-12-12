@@ -16,6 +16,7 @@ This project demonstrates how to use the popular postgreSQL database with Flask.
    - [Create a Database](#step-5-create-a-database)
    - [See All Databases](#step-6-see-all-your-databases)
  - [Testing the Application Locally](#testing-the-application-locally)
+ - [Unit Tests](#unit-tests)
 
 ## Technologies Used
 
@@ -177,3 +178,17 @@ $ source venv/bin/activate
 ```
 
 - Navigate to your browser and paste the link http://127.0.0.1:5000 to see the actual application.
+
+## Unit Tests
+
+This application features unit tests. The approach here is to implement test-driven development. These tests should all fail prior to building the application. Once built, all tests should pass. 
+
+The tests as seen in the [test](test_web_app.py) module are not exhaustive. Not all aspects of this application are tested. This module is an effort to explain how to create unit tests as seen in [this article](https://github.com/GitauHarrison/notes/blob/master/unit_testing/unit_testing_in_flask.md). 
+
+To run the tests, ensure you have cloned this repo. From the top-level directory, run this command:
+
+```python
+(venv)$ pytest --cov=test_web_app --cov-report=term-missing --cov-branch
+```
+
+All 6 tests should pass, and the test should show 100% coverage.
